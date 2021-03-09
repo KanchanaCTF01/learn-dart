@@ -6,54 +6,21 @@
     // ทำ class ชื่อ SmallDog ไป extends Dog โดยมี method ชื่อว่า runAway() เพิ่มเข้ามา โดยให้ print ว่า “I am running ”
     // ใน Class SmallDog ให้ประกาศ static variable ชื่อว่า MAX_BODY_SIZE กำหนดค่า = 30 
     // ทำ method ชื่อว่า isSmall ใน SmallDog โดย เช็คค่า size กับ MAX_BODY_SIZE  ถ้า size > MAX_BODY_SIZE จะ Return false ไม่อย่างงั้นก็จะ return true 
-
-// void main() { 
-//    Dog c = new Dog("name", "type", 5, 10); 
-//   //  c.disp(); 
-// }  
-// class Dog {  
-//    // field 
-//    String name;
-//    String type;
-//    int age;
-//    int size;
-
-//    Dog (String name, String type,int age, int size) {
-//      this.name = name;
-//      this.type = type;
-//      this.age = age;
-//      this.size = size;   
-//      print("The engine is : ${name} ${type} ${age} ${size}");  
-//    }   
-   
-//    // function 
-//   //  void disp() { 
-//   //     print(engine); 
-//   //  } 
-// }
 void main() {
-  
+  Dog v1 = new Dog("name","type",5,10);
+  print(v1);
 }
 
-class Spacecraft {
+class Dog {
   String name;
-  DateTime launchDate;
+  String type;
+  int age;
+  int size;
 
-  // Constructor, with syntactic sugar for assignment to members.
-  Spacecraft(this.name, this.launchDate) {
-    // Initialization code goes here.
-  }
-
-  // Method.
-  void describe() {
-    print('Spacecraft: $name');
-    if (launchDate != null) {
-      int years =
-          DateTime.now().difference(launchDate).inDays ~/
-              365;
-      print('Launched: ($years years ago)');
-    } else {
-      print('Unlaunched');
-    }
+  Dog(this.name, this.type, this.age,this.size) {
+    print(this.name);
+    print(this.type);
+    print(this.age);
+    print(this.size);
   }
 }
